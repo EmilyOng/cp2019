@@ -13,6 +13,12 @@ def find_gcd(n1,n2):
             print("The gcd of",n1,"&",n2,"is",i,end=".")
             exit(0)
 
+def euclid(n1,n2):
+    if n2==0:
+        return n1
+    else:
+        return euclid(n2,n1%n2)
 n1=int(input())
 n2=int(input())
+print("The gcd of",n1,"&",n2,"is",euclid(n1,n2),end=".")
 find_gcd(n1,n2)
