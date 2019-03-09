@@ -12,18 +12,11 @@ for i in range(n):
     size=int(input())
     sizes.append(size)
 
-sizes.sort()
 for i in range(n):
-    size=sizes[i]
-    if size>capacity[curr_row]:
-        if curr_row+1>=row:
-            tickets=tickets
-        else:
-            curr_row+=1
-            capacity[curr_row]-=size
-            tickets+=size
-    else:
-        capacity[curr_row]-=size
-        tickets+=size
-        
+    for j in range(row):
+        if capacity[j]>=sizes[i]:
+            capacity[j]-=sizes[i]
+            tickets+=sizes[i]
+            break
+
 print(tickets)
