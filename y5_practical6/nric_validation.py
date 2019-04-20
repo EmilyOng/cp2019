@@ -16,8 +16,6 @@ for i in range(9):
 alpha_weight[10]=chr(90)
 alpha_weight[11]=chr(74)
 
-valid_flag=False
-
 def compare_alphabet(check_digit,nric):
     if alpha_weight[check_digit]==str(nric[-1]).upper():
         return True
@@ -28,23 +26,26 @@ def valid_nric(nric):
     check_valid_nric=bool(pattern.match(nric))
     if not check_valid_nric:
         return False
-    total_weight=0
+    total_weight=4
     for digit in range(1,8):
         total_weight+=int(nric[digit])*weight[digit-1]
     remainder=total_weight%11
     check_digit=11-remainder
-    print(total_weight,check_digit)
-    print(alpha_weight)
     if compare_alphabet(check_digit,nric):
         return True
     else:
         return False
-while not valid_flag:
-    nric=str(input())
-    if not valid_nric(nric):
-        print("Please enter a valid NRIC.")
-        continue
-    valid_flag=True
+def start():
+    valid_flag=False
+    while not valid_flag:
+        nric=str(input())
+        if not valid_nric(nric):
+            print("Please enter a valid NRIC.")
+            print("NRIC: ")
+            continue
+        valid_flag=True
+        return nric
+        print("Valid NRIC.")
 
     
 

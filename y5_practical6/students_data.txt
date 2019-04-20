@@ -1,0 +1,54 @@
+Data for 19y5c34 emily
+NRIC: HIDDEN
+Name: emily
+Class: 19y5c34
+Gender F/M: f
+DOB DD/MM/YYYY: 11/01/2002
+Weight (kg): 50
+Height (m): 160
+
+Data for 19y5c34 jane
+NRIC: HIDDEN
+Name: jane
+Class: 19y5c34
+Gender F/M: f
+DOB DD/MM/YYYY: 11/01/2002
+Weight (kg): 50
+Height (m): 170
+
+Data for 19y5c34 nou
+NRIC: HIDDEN
+Name: nou
+Class: 19y5c34
+Gender F/M: m
+DOB DD/MM/YYYY: 11/02/2002
+Weight (kg): 50
+Height (m): 160
+
+Data for 19y5c34 noodle
+NRIC: HIDDEN
+Name: noodle
+Class: 19y5c34
+Gender F/M: f
+DOB DD/MM/YYYY: 11/01/2002
+Weight (kg): 50
+Height (m): 170
+
+Data for 19y5c34 emily
+NRIC: HIDDEN
+Name: emily
+Class: 19y5c34
+Gender F/M: f
+DOB DD/MM/YYYY: 19/02/2002
+Weight (kg): 50
+Height (m): 160
+
+Data for 19y5c34 emily
+NRIC: HIDDEN
+Name: emily
+Class: 19y5c34
+Gender F/M: f
+DOB DD/MM/YYYY: 11/01/2002
+Weight (kg): 50
+Height (m): 150
+
