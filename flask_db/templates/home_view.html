@@ -1,0 +1,36 @@
+{%extends "layout.html"%}
+{%block content%}
+<div class="container-fluid">
+    <div class="alert alert-primary"><center><h1>{{type}}</h1></center></div>
+    <form action="." method="POST">
+        <div class="form-group">
+            <label for="username_form">Username</label>
+            <input type="text" class="form-control" id="username_form" name="username" placeholder="Enter username">
+            <label for="password_form">Password</label>
+            <input type="password" class="form-control" id="password_form" name="password" placeholder="Enter password">
+            <br/>
+            <input name="submit" type="submit" value="{{type}}">
+        </div>
+    </form>
+    {%if fail%}
+    <div class="alert alert-danger">Wrong username or password</div>
+    {%endif%}
+    {%if exists%}
+    <div class="alert alert-danger">Username already exists</div>
+    {%endif%}
+    {%if invalid%}
+    <div class="alert alert-danger">Invalid username or password</div>
+    {%endif%}
+    {%if signup%}
+    <div class="alert alert-info">
+        Would you like to sign up for an account?
+        <br/>
+        <form action="." method="POST">
+            <div class="form-group">
+                <input type="submit" name="signup" value="Sign up" id=signup_form>
+            </div>
+        </form>
+    </div>
+    {%endif%}
+</div>
+{%endblock%}
