@@ -2,8 +2,9 @@
 ##compute the total balance after n years with an interest rate of 2% per annum.
 
 def check_digit (num):
-    if not str(num).isdigit():
-        print("Expected a number.")
+    try:
+        num = int(num)
+    except ValueError:
         return False
     return True
 
@@ -21,36 +22,43 @@ class BankAccount:
 
     def deposit (self, num):
         if not check_digit(num):
-            return False
+            return "Expected a number."
         if num <= 0:
-            print("Expected a deposition amount more than 0 dollars.")
-            return False
+            return "Expected a deposition amount more than 0 dollars."
 
         self.bank += num
-        self.update_account()
+##        self.update_account()
+        return self.bank
 
 
     def withdraw (self, num):
         if not check_digit(num):
-            return False
+            return "Expected a number."
         if num <= 0:
-            print("Expected a withdrawal amount more than 0 dollars.")
-            return False
+            return "Expected a withdrawal amount more than 0 dollars."
         if num > self.bank:
-            print("Cannot withdrawl an amount more than your current balance.")
-            return False
-
+            return "Cannot withdrawl an amount more than your current balance."
+        
         self.bank -= num
-        self.update_account()
+##        self.update_account()
+        return self.bank
+
 
 
     def see_account (self):
         self.update_account("Current")
 
 
-# main
-bank = BankAccount("C34")
-bank.withdraw(10)
-bank.deposit(100)
-bank.see_account()
+    def calc_interest (self, year):
+        if year <= 0:
+            return "Expected at least 1 year."
+        return self.bank * ((1.02)**year)
     
+
+
+# main
+##bank = BankAccount("C34")
+##bank.withdraw(10)
+##bank.deposit(100)
+##bank.see_account()
+##    
